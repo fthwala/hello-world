@@ -6,7 +6,7 @@
 /*   By: fthwala <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/10 11:14:58 by fthwala           #+#    #+#             */
-/*   Updated: 2017/09/10 11:24:57 by fthwala          ###   ########.fr       */
+/*   Updated: 2017/09/10 11:47:17 by fthwala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,23 @@ void	ft_putstr(char *str)
 	}
 }
 
+void	ft_rev_hello_wld(char *str)
+{
+	int len;
+
+	len = ft_strlen(str);
+	while (len >= 0)
+	{
+		ft_putchar(str[len]);
+		len--;
+	}
+}
+
 int		main()
 {
 	ft_putstr("Hello World");
+	ft_putchar('\n');
+	ft_rev_hello_wld("Hello World");
+	ft_putchar('\n');
 	return (0);
 }
